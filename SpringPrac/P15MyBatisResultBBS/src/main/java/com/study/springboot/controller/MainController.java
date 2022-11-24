@@ -1,0 +1,90 @@
+package com.study.springboot.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.study.springboot.dao.IbasicBbsDao;
+
+@Controller
+public class MainController {
+
+	@Autowired
+	IbasicBbsDao dao;
+	
+	@RequestMapping("/")
+	public String root() {
+		
+		// 들어오면 다른페이지(redirect:list(list로 간다))로 보내버리겠다
+		return "redirect:list";
+	}
+	
+	@RequestMapping("/list")
+	public String userlist(Model model) {
+		model.addAttribute("list" , dao.listDao());
+		
+		int total=dao.postCount();
+		System.out.println("total count:" + total);
+		
+		return "list";
+	}
+	
+	@RequestMapping("/write")
+	public String writeForm() {
+		return "writeForm";
+	}
+	
+	@RequestMapping("/writing")
+	public String write(HttpServletRequest req, Model model) {
+		String wri=req.getParameter("writer");
+		String tit=req.getParameter("title");
+		String con=req.getParameter("content");
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("writer", wri);
+		map.put("title", tit);
+		map.put("content", con);
+		int res = dao.writeDao(map);
+		System.out.println("write:" + res);
+		return "redirect:list"; //redirect를 사용하면 주소 맵핑 방향으로 간다 
+	}
+	
+	@RequestMapping("/view")
+	public String detailView(HttpServletRequest req, Model model) {
+		String uId = req.getParameter("id");
+		model.addAttribute("dto",dao.viewDao(uId));
+		return "view"; // view 파일 jsp 쪽으로 간다
+	}
+	
+	@RequestMapping("/delete")
+	public String delete(HttpServletRequest req, Model model) {
+		int res = dao.deleteDao(req.getParameter("id"));
+		System.out.println("delete:" + res);
+		return "redirect:list";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

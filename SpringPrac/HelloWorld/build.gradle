@@ -1,0 +1,25 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+	id 'war'
+} // 초반에 설정한 내용
+
+group = 'com.study'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web' // 설정한 내용
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat' // 톰캣was는 자체적으로 제공
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' 
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+

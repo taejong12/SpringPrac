@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.study.springboot.auth&apos; to &apos;P25ShopJPA/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;P18Security&apos;&#x0D;&#x0A;- Destination element: &apos;P25ShopJPA/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;P18Security/src/main/java/com.study.springboot.auth&apos;" description="Copy package" destination="=P25ShopJPA/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;com.study.springboot.auth" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1668588715129" version="1.0"/>
+</session>

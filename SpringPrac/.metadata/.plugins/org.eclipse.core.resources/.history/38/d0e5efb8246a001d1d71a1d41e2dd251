@@ -1,0 +1,5 @@
+package com.shop.test.dto;
+
+public class TestDto {
+
+}

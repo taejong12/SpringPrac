@@ -1,0 +1,29 @@
+package com.shop.test.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.shop.test.dao.TestDao;
+
+@Controller
+public class MainController {
+	
+	@Autowired
+	TestDao dao;
+	
+	@GetMapping(value="/")
+	public String root() {
+		return "redirect:list";
+	}
+	
+	@GetMapping(value="/list")
+	public String userlist(Model model) {
+		model.addAttribute("list", dao.listDao());
+		return "list";
+	}
+	
+	
+	
+}

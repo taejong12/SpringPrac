@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;mybatis.mapper&apos; to &apos;P20NoTransaction/src/main/resources&apos;&#x0D;&#x0A;- Original project: &apos;P14MyBatisBBS&apos;&#x0D;&#x0A;- Destination element: &apos;P20NoTransaction/src/main/resources&apos;&#x0D;&#x0A;- Original element: &apos;P14MyBatisBBS/src/main/resources/mybatis.mapper&apos;" description="Copy package" destination="=P20NoTransaction/src\/main\/resources=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/" element1="/src\/main\/resources=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;mybatis.mapper" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1668390775474" version="1.0"/>
+</session>
