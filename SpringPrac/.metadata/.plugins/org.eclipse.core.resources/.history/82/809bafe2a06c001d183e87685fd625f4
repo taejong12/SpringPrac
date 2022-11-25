@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!-- xml 문서입니다 하는 내용 -->
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.shop.dao.TestOneDao">
+	<select id="listDao" resultType="com.shop.dto.TestOneDto">
+		select * from testone order by id desc
+	</select>
+	
+	<select id="viewDao" resultType="com.shop.dto.TestOneDto">
+		select * from testone where id=#{0}
+	</select>
+	
+	<insert id="writeDao" parameterType="java.util.HashMap">
+		insert into testone (id, UPDATE_TIME, CREATED_BY, ITEM_DETAIL, ITEM_NAME, ITEM_SELL_STATUS, PRICE, STOCK)
+		values (TEST_BOARD_SEQ.nextval, #{UPDATE_TIME}, #{CREATED_BY, jdbcType=VARCHAR}, #{ITEM_DETAIL}, #{ITEM_NAME}, #{ITEM_SELL_STATUS}, #{PRICE}, #{STOCK})
+	</insert>
+	
+	<delete id="deleteDao">
+		delete from testone where ID = #{_id}
+	</delete>	
+	
+	<select id="postCount" resultType="_int">
+		select count(*) from testone 
+	</select>
+</mapper>
+

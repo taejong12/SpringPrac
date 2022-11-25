@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!-- xml 문서입니다 하는 내용 -->
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<configuration>        
+    <settings>        
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+    </settings>    
+</configuration>    
+
+<mapper namespace="com.shop.dao.IbasicBbsDao">
+	<select id="listDao" resultType="com.shop.dto.BasicBbsDto">
+		select * from TEST_BOARD order by ID desc
+	</select>
+	
+	<select id="viewDao" resultType="com.shop.dto.BasicBbsDto">
+		select * from TEST_BOARD where ID=#{0}
+	</select>
+	
+	<insert id="writeDao" parameterType="java.util.HashMap">
+		insert into TEST_BOARD (ID, UPDATE_TIME, CREATED_BY, ITEM_DETAIL, ITEM_NAME, ITEM_SELL_STATUS, PRICE, STOCK)
+		values (TEST_BOARD_SEQ.nextval, #{UPDATE_TIME}, #{CREATED_BY, jdbcType=VARCHAR}, #{ITEM_DETAIL}, #{ITEM_NAME}, #{ITEM_SELL_STATUS}, #{PRICE}, #{STOCK})
+	</insert>
+	
+	<delete id="deleteDao">
+		delete from TEST_BOARD where ID = #{_id}
+	</delete>	
+	
+	<select id="postCount" resultType="_int">
+		select count(*) from TEST_BOARD 
+	</select>
+</mapper>
+

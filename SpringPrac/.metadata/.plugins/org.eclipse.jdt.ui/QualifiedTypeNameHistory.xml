@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.thymeleaf.util.StringUtils"/>
-    <fullyQualifiedTypeName name="com.querydsl.core.BooleanBuilder"/>
-    <fullyQualifiedTypeName name="com.shop.constant.ItemSellStatus"/>
     <fullyQualifiedTypeName name="java.awt.print.Pageable"/>
     <fullyQualifiedTypeName name="org.h2.mvstore.Page"/>
     <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
@@ -26,9 +23,6 @@
     <fullyQualifiedTypeName name="javax.persistence.Enumerated"/>
     <fullyQualifiedTypeName name="javax.persistence.EnumType"/>
     <fullyQualifiedTypeName name="com.shop.constant.Role"/>
-    <fullyQualifiedTypeName name="lombok.Getter"/>
-    <fullyQualifiedTypeName name="lombok.Setter"/>
-    <fullyQualifiedTypeName name="lombok.ToString"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="javax.transaction.Transactional"/>
     <fullyQualifiedTypeName name="org.springframework.boot.context.properties.ConstructorBinding"/>
@@ -55,9 +49,15 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="com.shop.dao.IbasicBbsDao"/>
     <fullyQualifiedTypeName name="com.shop.dto.BasicBbsDto"/>
     <fullyQualifiedTypeName name="com.shop.service.BasicBbsService"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="lombok.ToString"/>
+    <fullyQualifiedTypeName name="com.shop.dao.TestOneDao"/>
+    <fullyQualifiedTypeName name="com.shop.dto.TestOneDto"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.shop.service.TestOneService"/>
 </qualifiedTypeNameHistroy>

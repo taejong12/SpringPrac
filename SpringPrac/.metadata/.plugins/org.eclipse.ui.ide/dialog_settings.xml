@@ -89,6 +89,10 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\Final\Spring\FinalProject"/>
+			<item value="D:\SpringPrac\FinalProjectPrac"/>
+			<item value="D:\SpringPrac\P34ShopOrder"/>
+			<item value="D:\SpringPrac\P33ShopOrder"/>
 			<item value="D:\SpringPrac\P32SpringBatch"/>
 			<item value="D:\SpringPrac\P31ShopFile"/>
 			<item value="D:\SpringPrac\FinalProject"/>
@@ -105,7 +109,6 @@
 			<item value="D:\SpringPrac\P16Log"/>
 			<item value="D:\SpringPrac\P15MyBatisResultBBS"/>
 			<item value="D:\SpringPrac\P11UseValidAnnotation"/>
-			<item value="D:\SpringPrac\P10UseValidationUtils"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

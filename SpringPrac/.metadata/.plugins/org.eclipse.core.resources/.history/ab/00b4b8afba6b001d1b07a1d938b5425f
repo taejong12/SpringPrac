@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!-- xml 문서입니다 하는 내용 -->
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 
+
+	sql문
+	작성
+	쿼리문들을 넣어준다
+	해당하는 id값을 적는다
+	호출해서 쓸 수 있는데 간략화 됐다
+	
+	namespace
+	여기에 있는 것과 매칭시킬 인터페이스 dao 값을 넣어준다
+	해당하는 인터페이스랑 맵퍼랑 연동시켜서 짝을 지어준다
+	인터페이스에 있는 메서드들
+	sql문과 짝이 지어져있는데 여기서 다 지어준다
+	인터페이스에 있는 이름 자체를 아디에 넣어준다
+	해당 메서드랑 짝을 지어준다
+	이 sql을 실행시킬거다
+	
+	이 다음에 등장하는게 resultType
+	sql에서 결과값이 돌아오는데 이걸 뭐로 받아줄건지
+	지금은 dto로 받아줄거니까 dto 클래스를 적는다
+	일반적인 데이터타입들은 자체적으로 별명을 제공해준다
+	인티저나 스트링 같은 기본적인 부분들은 알아서 제공
+	
+	파라미터 타입도 있다
+
+ -->
+
+
+
+<mapper namespace="com.shop.dao.IbasicBbsDao">
+	<select id="listDao" resultType="com.shop.dto.BasicBbsDto">
+		select * from TEST_BOARD order by id desc
+	</select>
+	
+	<select id="viewDao" resultType="com.shop.dto.BasicBbsDto">
+		<!-- select * from basic_bbs where id=#{param1} -->
+		select * from TEST_BOARD where id=#{0}
+	</select>
+	
+	<insert id="writeDao" parameterType="java.util.HashMap">
+		insert into TEST_BOARD (id, CREATED_BY, ITEM_DETAIL, ITEM_NAME, price, stock)
+		values (TEST_BOARD_SEQ.nextval, #{CREATED_BY}, #{ITEM_DETAIL}, #{ITEM_NAME}, #{price}, #{stock})
+	</insert>
+	
+	<delete id="deleteDao">
+		<!-- delete from basic_bbs where id = #{param1} -->
+		delete from TEST_BOARD where id = #{_id}
+	</delete>	
+	
+	<!-- 
+		기본적인 항목들을 데이터 처리하는데 있어서는 풀로 안적어도 받아준다
+		해쉬는 다 쓴다
+		얼라이언스 별칭 as
+		클래스로 들어가 있다
+	 -->
+	
+	<select id="postCount" resultType="_int">
+		select count(*) from TEST_BOARD 
+	</select>
+</mapper>
+

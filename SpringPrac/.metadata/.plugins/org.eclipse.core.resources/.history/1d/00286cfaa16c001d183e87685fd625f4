@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>writeForm</title>
+</head>
+<body>
+	<form action="writing" method="post" enctype="multipart/form-data">
+		작성자: <input type="text" name="created_by"  /><br/>
+		상품명: <input type="text" name="item_name" /><br/>
+		상품내용: <input type="text" name="item_detail"  /><br/>
+		상태: <select name="item_sell_status">
+			    <option value="판매중">판매중</option>
+			    <option value="품절">품절</option>
+			</select> <br/>
+		가격: <input type="number" name="price"/> <br/>
+		재고: <input type="number" name="stock"/> <br/>
+		날짜: <input type="date" name="update_time"/> <br/>
+		
+		<input type="submit" value="입력" /><br/>
+		<a href="list">목록</a>
+	</form>
+</body>
+</html>
