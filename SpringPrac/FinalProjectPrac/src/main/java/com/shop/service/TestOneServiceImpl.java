@@ -44,6 +44,12 @@ public class TestOneServiceImpl implements TestOneService{
 
 		return dao.postCount();
 	}
+
+	@Override
+	public int update(Map<String, String> umap) {
+		
+		return dao.updateDao(umap);
+	}
 	
 
 }

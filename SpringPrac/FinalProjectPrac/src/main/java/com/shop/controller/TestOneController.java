@@ -58,7 +58,7 @@ public class TestOneController {
 		map.put("time", time);
 		
 		int res = service.write(map);
-		System.out.println("created_by:" + res);
+		System.out.println("writer:" + res);
 		return "redirect:listOne"; //redirect를 사용하면 주소 맵핑 방향으로 간다 
 	}
 	
@@ -76,8 +76,37 @@ public class TestOneController {
 		return "redirect:listOne";
 	}
 	
+	@RequestMapping("/updateOne")
+	public String updateForm(HttpServletRequest req, Model model) {
+		String uId = req.getParameter("id");
+		System.out.println(uId);
+		model.addAttribute("dto",service.view(uId));
+		return "/testBoardOne/updateForm";
+	}
 	
+	@RequestMapping("/updatingOne")
+	public String update(HttpServletRequest req, Model model) {
+		String id = req.getParameter("id");
+		String iname=req.getParameter("iname");
+		String idetail=req.getParameter("idetail");
+		String istatus=req.getParameter("istatus");
+		String price=req.getParameter("price");
+		String stock=req.getParameter("stock");
+		System.out.println(iname);
+		System.out.println(id);
+		
+		Map<String, String> umap = new HashMap<String, String>();
+		umap.put("id", id);
+		umap.put("iname", iname);
+		umap.put("idetail", idetail);
+		umap.put("istatus", istatus);
+		umap.put("price", price);
+		umap.put("stock", stock);
 	
+		int res = service.update(umap);
+		System.out.println("writer:" + res);
+		return "redirect:listOne";
+	}
 	
 	
 	

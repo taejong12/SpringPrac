@@ -14,5 +14,6 @@ public interface TestOneService {
 	public int write(Map<String, String> map);
 	public int delete(String id);
 	public int count();
+	public int update(Map<String, String> umap);
 	
 }

@@ -11,7 +11,7 @@
 
 <body>
 <a href="/">홈페이지</a>
-<table width="500" cellpadding="0" cellspacing="0" border="1">
+<table width="800" cellpadding="0" cellspacing="0" border="1">
 	<tr>
 		<td>번호</td>
 		<td>작성자</td>

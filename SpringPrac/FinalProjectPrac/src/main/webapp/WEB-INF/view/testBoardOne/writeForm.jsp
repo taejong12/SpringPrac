@@ -10,7 +10,7 @@
 	<form action="writingOne" method="post" enctype="multipart/form-data">
 		작성자: <input type="text" name="writer"  /><br/>
 		상품명: <input type="text" name="iname" /><br/>
-		상품내용: <input type="text" name="idetail"  /><br/>
+		상품내용: <textarea name="idetail"></textarea><br/>
 		상태: <select name="istatus">
 			    <option value="판매중">판매중</option>
 			    <option value="품절">품절</option>
